@@ -89,30 +89,46 @@ const EXPERIENCES: Experience[] = [
 
 const PROJECTS: Project[] = [
   {
-    title: "App Eccomerce Microservice",
+    title: "DevStagram - MCV",
     description:
-      "Proyecto backend en progreso basado en NestJS con arquitectura de microservicios. Actualmente implementa un flujo basico de productos: un API Gateway HTTP que delega operaciones a un microservicio de productos via transporte TCP.",
-    tech: ["NestJS", "PostgreSQL", "Docker", "AWS"],
+      "DevStagram es una red social de fotografías construida con Laravel 11, inspirada en la dinámica de Instagram. La aplicación permite a los usuarios registrarse, crear publicaciones con imagen, dar likes, comentar y seguir a otros perfiles.",
+    tech: ["PHP", "Laravel", "Livewire", "Blade", "MySQL", "Docker", "AWS"],
     type: "Backend",
-    link: "https://github.com/nicoramo2s/nest-microservice-eccomerce-app",
+    link: "https://github.com/nicoramo2s/devstagram",
     deployLink: "#",
   },
   {
-    title: "Trabajo Listo",
+    title: "Sistema Pedidos Restaurante Multinat - TDD / REST API",
     description:
-      "Creado con el propósito de simplificar y agilizar el proceso de búsqueda de servicios. La función principal de la aplicación es brindar una plataforma que permite a los usuarios buscar servicios posteados por profesionales, realizar consultas, contactar al profesional y contratar el servicio",
-    tech: ["Node.js", "NestJS", "MongoDB", "Docker", "Typescript"],
+      "DevStagram es una red social de fotografías construida con Laravel 11, inspirada en la dinámica de Instagram. La aplicación permite a los usuarios registrarse, crear publicaciones con imagen, dar likes, comentar y seguir a otros perfiles.",
+    tech: ["PHP", "Laravel", "TDD", "MySQL", "Docker", "Testing", "PHPUnit"],
     type: "Backend",
-    link: "https://github.com/nicoramo2s/trabajo_listo",
-    deployLink: "https://c16-10-m-node-react.vercel.app/",
+    link: "https://github.com/nicoramo2s/tdd-api-rest",
+    deployLink: "#",
   },
   {
-    title: "API Blog",
-    description:
-      "Backend API desarrollada con NestJS y TypeScript, enfocada en buenas prácticas de arquitectura, autenticación y escalabilidad.",
-    tech: ["TypeScript", "NestJS", "Node.js", "PostgreSQL"],
+    title: "DevJobs - MVC",
+    description: `DevJobs es una plataforma de bolsas de trabajo construida con Laravel 11 + Livewire donde: Reclutadores publican y administran vacantes y developers exploran oportunidades y se postulan. El proyecto incluye autenticación, verificación de email, filtros de búsqueda, panel de vacantes para reclutadores y gestión de candidatos por cada vacante.`,
+    tech: ["PHP", "Laravel", "Livewire", "Blade", "MySQL", "Docker", "AWS"],
     type: "Backend",
-    link: "https://github.com/nicoramo2s/blog-api-nestjs",
+    link: "https://github.com/nicoramo2s/devjobs",
+    deployLink: "#",
+  },
+  {
+    title: "Sistema de Ordenes Restaurantes - Microservicio",
+    description:
+      "Este proyecto consiste en una arquitectura de microservicios utilizando Laravel. Cada servicio está diseñado para manejar una parte específica de la aplicación, permitiendo una mayor escalabilidad y mantenibilidad.",
+    tech: [
+      "PHP",
+      "Laravel",
+      "Docker",
+      "MySQL",
+      "RabbitMQ",
+      "PostgreSQL",
+      "MongoDB",
+    ],
+    type: "Backend",
+    link: "https://github.com/nicoramo2s/microservicio-laravel",
     deployLink: "#",
   },
 ];
