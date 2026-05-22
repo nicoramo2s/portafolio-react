@@ -40,95 +40,105 @@ interface Experience {
 const SKILLS = [
   {
     category: "Backend Core",
-    items: ["PHP", "Laravel", "REST APIs", "MySQL", "Eloquent ORM"],
+    items: ["PHP", "Laravel", "NestJS", "Node.js", "TypeScript"],
     icon: <Server className="w-5 h-5 text-blue-400" />,
   },
   {
-    category: "Databases & Cache",
-    items: ["MySQL", "PostgreSQL", "Redis", "MongoDB"],
+    category: "Databases & Events",
+    items: ["MySQL", "PostgreSQL", "Redis (Jobs/Queues)", "MongoDB"],
     icon: <Database className="w-5 h-5 text-emerald-400" />,
   },
   {
-    category: "DevOps & Tools",
-    items: ["Docker", "Git", "AWS", "Nginx", "GitHub Actions"],
-    icon: <Cloud className="w-5 h-5 text-cyan-400" />,
+    category: "IA & Integración",
+    items: [
+      "Desarrollo Asistido con IA",
+      "Integración de LLMs (OpenAI)",
+      "APIs de Terceros",
+      "Swagger",
+    ],
+    icon: <Cpu className="w-5 h-5 text-purple-400" />,
   },
   {
-    category: "Secondary Stack",
-    items: ["Java", "Spring Boot", "React", "Angular"],
-    icon: <Code2 className="w-5 h-5 text-purple-400" />,
+    category: "DevOps & Tools",
+    items: ["Docker", "Git", "AWS (EC2, S3, RDS)", "Nginx"],
+    icon: <Cloud className="w-5 h-5 text-cyan-400" />,
   },
 ];
 
 const EXPERIENCES: Experience[] = [
   {
-    company: "Desarrollo Independiente / Proyectos",
-    role: "Backend Developer (PHP & Laravel)",
-    period: "2024 - Presente",
+    company: "Papyrus Libreria",
+    role: "Desarrollador Full Stack",
+    period: "Mayo 2026 - Presente",
     description: [
-      "Diseño y desarrollo de sistemas backend robustos utilizando PHP y Laravel.",
-      "Implementación de arquitecturas MVC y patrones de diseño para código mantenible.",
-      "Desarrollo de APIs RESTful seguras con autenticación JWT y Laravel Sanctum.",
-      "Gestión y optimización de bases de datos relacionales con Eloquent y SQL nativo.",
+      "Diseño y desarrollo de la arquitectura backend para un sistema de automatización comercial, control de stock y facturación electrónica utilizando NestJS y Node.js.",
+      "Implementación de flujos de trabajo optimizados mediante desarrollo asistido con IA, incrementando notablemente la velocidad de entrega de funcionalidades.",
+      "Construcción de módulos modulares y escalables, asegurando la consistencia de datos y un sistema robusto de permisos por roles.",
     ],
-    tech: ["PHP", "Laravel", "MySQL", "Docker", "Git"],
+    tech: [
+      "NestJS",
+      "Node.js",
+      "TypeScript",
+      "Desarrollo Asistido con IA",
+      "Git",
+    ],
   },
   {
     company: "Nube",
-    role: "Backend Developer",
-    period: "Marzo 2025 - Presente",
+    role: "Backend Developer PHP - Laravel",
+    period: "Marzo 2025 - Mayo 2026 (1 año 3 meses)",
     description: [
-      "Desarrollo de lógica de negocio compleja y mantenimiento de servicios backend.",
-      "Optimización de consultas a bases de datos y mejora del rendimiento general.",
-      "Colaboración en el diseño de arquitectura y buenas prácticas de desarrollo.",
-      "Integración de servicios externos y automatización de procesos.",
+      "Desarrollo y mantenimiento de funcionalidades críticas en el backend utilizando PHP y Laravel para sistemas empresariales.",
+      "Diseño e implementación de procesos automatizados en segundo plano mediante Jobs y Queues (Redis), optimizando el rendimiento del servidor y mejorando los tiempos de respuesta del usuario.",
+      "Construcción de APIs REST robustas, manejo seguro de autenticación (JWT/Sanctum) y optimización de consultas complejas con Eloquent ORM y MySQL.",
+      "Integración exitosa con APIs externas, integración con OpenAI para la automatización de cargas de stock y control de versiones bajo flujos de trabajo con Git.",
     ],
-    tech: ["PHP", "Laravel", "RabbitMQ", "MySQL", "AWS", "Git"],
+    tech: [
+      "PHP",
+      "Laravel",
+      "MySQL",
+      "Redis (Queues/Jobs)",
+      "OpenAI API",
+      "Git",
+    ],
   },
 ];
 
 const PROJECTS: Project[] = [
   {
-    title: "DevStagram - MCV",
+    title: "Trabajo Listo",
     description:
-      "DevStagram es una red social de fotografías construida con Laravel 11, inspirada en la dinámica de Instagram. La aplicación permite a los usuarios registrarse, crear publicaciones con imagen, dar likes, comentar y seguir a otros perfiles.",
-    tech: ["PHP", "Laravel", "Livewire", "Blade", "MySQL", "Docker", "AWS"],
+      "Creado con el propósito de simplificar y agilizar el proceso de búsqueda de servicios. La función principal de la aplicación es brindar una plataforma que permite a los usuarios buscar servicios posteados por profesionales, realizar consultas, contactar al profesional y contratar el servicio.",
+    tech: ["Node.js", "NestJS", "MongoDB", "Docker", "TypeScript"],
     type: "Backend",
-    link: "https://github.com/nicoramo2s/devstagram",
+    link: "https://github.com/nicoramo2s/trabajo_listo",
+    deployLink: "https://c16-10-m-node-react.vercel.app/",
+  },
+  {
+    title: "App Ecommerce Microservice",
+    description:
+      "Proyecto backend basado en NestJS con arquitectura de microservicios. Implementa un flujo base de productos utilizando un API Gateway HTTP que delega operaciones a un microservicio de productos con transporte TCP.",
+    tech: ["NestJS", "TypeScript", "PostgreSQL", "Docker", "TCP Transport"],
+    type: "Backend",
+    link: "https://github.com/nicoramo2s/nest-microservice-eccomerce-app",
     deployLink: "#",
   },
   {
-    title: "Sistema Pedidos Restaurante Multinat - TDD / REST API",
+    title: "Laravel E-Commerce API",
     description:
-      "DevStagram es una red social de fotografías construida con Laravel 11, inspirada en la dinámica de Instagram. La aplicación permite a los usuarios registrarse, crear publicaciones con imagen, dar likes, comentar y seguir a otros perfiles.",
-    tech: ["PHP", "Laravel", "TDD", "MySQL", "Docker", "Testing", "PHPUnit"],
+      "API robusta especializada para comercio electrónico construida con Laravel. Cuenta con Jobs en segundo plano, colas (Queues) con Redis, autenticación robusta mediante Laravel Sanctum e integración con Pasarela de pagos.",
+    tech: ["PHP", "Laravel", "MySQL", "Redis (Queues/Jobs)", "Sanctum"],
     type: "Backend",
-    link: "https://github.com/nicoramo2s/tdd-api-rest",
+    link: "https://github.com/nicoramo2s",
     deployLink: "#",
   },
   {
-    title: "DevJobs - MVC",
-    description: `DevJobs es una plataforma de bolsas de trabajo construida con Laravel 11 + Livewire donde: Reclutadores publican y administran vacantes y developers exploran oportunidades y se postulan. El proyecto incluye autenticación, verificación de email, filtros de búsqueda, panel de vacantes para reclutadores y gestión de candidatos por cada vacante.`,
-    tech: ["PHP", "Laravel", "Livewire", "Blade", "MySQL", "Docker", "AWS"],
-    type: "Backend",
-    link: "https://github.com/nicoramo2s/devjobs",
-    deployLink: "#",
-  },
-  {
-    title: "Sistema de Ordenes Restaurantes - Microservicio",
+    title: "API Blog",
     description:
-      "Este proyecto consiste en una arquitectura de microservicios utilizando Laravel. Cada servicio está diseñado para manejar una parte específica de la aplicación, permitiendo una mayor escalabilidad y mantenibilidad.",
-    tech: [
-      "PHP",
-      "Laravel",
-      "Docker",
-      "MySQL",
-      "RabbitMQ",
-      "PostgreSQL",
-      "MongoDB",
-    ],
+      "Backend API potente desarrollada con NestJS y TypeScript, enfocada en buenas prácticas de arquitectura (Clean Architecture), autenticación modular, carga de archivos y alta escalabilidad de endpoints.",
+    tech: ["TypeScript", "NestJS", "Node.js", "PostgreSQL"],
     type: "Backend",
-    link: "https://github.com/nicoramo2s/microservicio-laravel",
+    link: "https://github.com/nicoramo2s/blog-api-nestjs",
     deployLink: "#",
   },
 ];
@@ -152,9 +162,9 @@ const SectionHeading = ({
 );
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<"experience" | "education">(
-    "experience",
-  );
+  const [activeTab, setActiveTab] = useState<
+    "experience" | "education" | "certifications"
+  >("experience");
 
   return (
     <div className="min-h-screen bg-[#0a0a0b] text-gray-300 font-sans selection:bg-blue-500/30">
@@ -226,7 +236,8 @@ export default function App() {
               <span className="text-blue-400 font-medium">
                 Backend Developer
               </span>{" "}
-              | PHP Laravel Developer | REST APIs | MySQL | Docker
+              | Node.js & NestJS | TypeScript | PHP & Laravel | Diseñado de
+              Arquitecturas Orientadas a Eventos e Integración de IA
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -264,26 +275,32 @@ export default function App() {
               />
               <div className="space-y-4 text-lg leading-relaxed">
                 <p>
-                  Soy un apasionado del backend enfocado en el desarrollo de{" "}
+                  Soy un apasionado{" "}
                   <span className="text-white font-medium">
-                    sistemas robustos con PHP y Laravel
-                  </span>
-                  . Mi experiencia se centra en la creación de APIs RESTful
-                  escalables, aplicando una sólida arquitectura MVC y
-                  optimizando el manejo de datos mediante Eloquent ORM.
+                    Desarrollador Backend
+                  </span>{" "}
+                  enfocado en crear APIs REST eficientes, automatizaciones y
+                  sistemas empresariales altamente escalables. Cuento con una
+                  base muy sólida en{" "}
+                  <span className="text-white font-medium">PHP y Laravel</span>,
+                  donde he implementado procesamiento de tareas asíncronas
+                  optimizadas en segundo plano mediante Jobs y Queues con Redis.
                 </p>
                 <p>
-                  Me especializo en el diseño de arquitecturas backend limpias,
-                  siguiendo principios{" "}
-                  <span className="text-white font-medium">SOLID</span> para
-                  garantizar código mantenible y testeable. Tengo experiencia
-                  integrando APIs de terceros, gestionando la seguridad mediante
-                  Laravel Sanctum/JWT y desplegando aplicaciones contenerizadas
-                  con Docker en AWS.
+                  Actualmente, complemento mi trayectoria con tecnologías en
+                  auge como{" "}
+                  <span className="text-white font-medium">
+                    TypeScript, Node.js y NestJS
+                  </span>
+                  . Me enfoco en optimizar flujos usando desarrollo asistido con
+                  Inteligencia Artificial, diseñar arquitecturas orientadas a
+                  eventos y construir integraciones potentes con modelos de
+                  lenguaje masivos (LLMs / OpenAI API) para fusionar el software
+                  tradicional con la era de la IA.
                 </p>
                 <div className="pt-4 flex gap-4">
                   <div className="flex flex-col">
-                    <span className="text-white font-bold text-2xl">1+</span>
+                    <span className="text-white font-bold text-2xl">1.5+</span>
                     <span className="text-gray-500 text-xs uppercase tracking-widest font-bold">
                       Año Exp.
                     </span>
@@ -297,7 +314,7 @@ export default function App() {
                   </div>
                   <div className="h-10 w-[1px] bg-white/10 mx-2"></div>
                   <div className="flex flex-col">
-                    <span className="text-white font-bold text-2xl">6+</span>
+                    <span className="text-white font-bold text-2xl">8+</span>
                     <span className="text-gray-500 text-xs uppercase tracking-widest font-bold">
                       Tecnologías Core
                     </span>
@@ -321,12 +338,12 @@ export default function App() {
                 </h3>
                 <ul className="space-y-4">
                   {[
-                    "Arquitectura MVC en Laravel",
-                    "Desarrollo de APIs RESTful",
-                    "Eloquent ORM & MySQL Ops",
-                    "Seguridad (Sanctum, JWT)",
-                    "Contenerización con Docker",
-                    "Buenas Prácticas (SOLID, Clean Code)",
+                    "Arquitecturas Orientadas a Eventos",
+                    "Tareas Asíncronas (Jobs & Queues con Redis)",
+                    "Integración Inteligente de Modelos de IA (LLMs)",
+                    "Desarrollo de REST APIs robustas",
+                    "Desarrollo Asistido por IA (Optimización de tiempos)",
+                    "Buenas Prácticas de Ingeniería (SOLID & Código Limpio)",
                   ].map((strength, i) => (
                     <li
                       key={i}
@@ -384,7 +401,7 @@ export default function App() {
             icon={<Briefcase className="w-5 h-5 text-blue-400" />}
           />
 
-          <div className="flex gap-4 mb-8 p-1 bg-white/[0.02] rounded-lg w-fit border border-white/5">
+          <div className="flex flex-wrap gap-4 mb-8 p-1 bg-white/[0.02] rounded-lg w-fit border border-white/5">
             <button
               onClick={() => setActiveTab("experience")}
               className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all ${activeTab === "experience" ? "bg-blue-600 text-white shadow-lg" : "hover:text-white"}`}
@@ -396,6 +413,12 @@ export default function App() {
               className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all ${activeTab === "education" ? "bg-blue-600 text-white shadow-lg" : "hover:text-white"}`}
             >
               Educación
+            </button>
+            <button
+              onClick={() => setActiveTab("certifications")}
+              className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all ${activeTab === "certifications" ? "bg-blue-600 text-white shadow-lg" : "hover:text-white"}`}
+            >
+              Certificaciones
             </button>
           </div>
 
@@ -432,8 +455,11 @@ export default function App() {
                       </div>
                       <ul className="space-y-3 mb-6 max-w-3xl">
                         {exp.description.map((item, j) => (
-                          <li key={j} className="flex gap-3 text-gray-400">
-                            <span className="text-blue-500 mt-1.5 flex-shrink-0 w-1 h-1 rounded-full bg-current"></span>
+                          <li
+                            key={j}
+                            className="flex gap-3 text-gray-400 text-base leading-relaxed"
+                          >
+                            <span className="text-blue-500 mt-2 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-current"></span>
                             {item}
                           </li>
                         ))}
@@ -451,7 +477,7 @@ export default function App() {
                     </div>
                   ))}
                 </motion.div>
-              ) : (
+              ) : activeTab === "education" ? (
                 <motion.div
                   key="edu"
                   initial={{ opacity: 0, x: 20 }}
@@ -484,13 +510,69 @@ export default function App() {
                     <div className="text-blue-400 font-medium mb-2">
                       Alura{" "}
                       <span className="text-gray-500 text-sm ml-2">
-                        (Feb 2024 - Dic 2024)
+                        (Febrero de 2024 - Diciembre de 2024)
                       </span>
                     </div>
-                    <p className="text-gray-400">
+                    <p className="text-gray-400 font-normal">
                       Programa intensivo focalizado en Java, Spring Boot,
-                      programación orientada a objetos y bases de datos
+                      programación orientada a objetos (POO), bases de datos y
+                      desarrollo de lógica de negocio backend.
+                    </p>
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="cert"
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="grid grid-cols-1 md:grid-cols-3 gap-6"
+                >
+                  <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-blue-500/20 hover:bg-white/[0.04] transition-all flex flex-col justify-between">
+                    <div>
+                      <span className="text-[10px] font-bold text-blue-400 uppercase tracking-widest block mb-2">
+                        PHP & Laravel
+                      </span>
+                      <h4 className="text-lg font-bold text-white mb-2 leading-snug">
+                        Laravel 9, 10, 11 - Aplicaciones y Sitios Web con PHP 8
+                        y MVC
+                      </h4>
+                    </div>
+                    <p className="text-sm text-gray-500 mt-4 leading-relaxed">
+                      Certificación integral en la creación de servicios backend
+                      dinámicos usando PHP moderno, arquitectura
+                      modelo-vista-controlador, seguridad y Eloquent.
+                    </p>
+                  </div>
+                  <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-blue-500/20 hover:bg-white/[0.04] transition-all flex flex-col justify-between">
+                    <div>
+                      <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest block mb-2">
+                        Desarrollo Backend
+                      </span>
+                      <h4 className="text-lg font-bold text-white mb-2 leading-snug">
+                        Programa Oracle Next Education F2 T6 Back-end
+                      </h4>
+                    </div>
+                    <p className="text-sm text-gray-500 mt-4 leading-relaxed">
+                      Formación integral auspiciada por Oracle y Alura enfocada
+                      en microservicios, APIs REST, lógica POO y bases de datos
                       relacionales.
+                    </p>
+                  </div>
+                  <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-blue-500/20 hover:bg-white/[0.04] transition-all flex flex-col justify-between">
+                    <div>
+                      <span className="text-[10px] font-bold text-purple-400 uppercase tracking-widest block mb-2">
+                        Node.js Ecosystem
+                      </span>
+                      <h4 className="text-lg font-bold text-white mb-2 leading-snug">
+                        Bootcamp de JavaScript en el Backend
+                      </h4>
+                    </div>
+                    <p className="text-sm text-gray-500 mt-4 leading-relaxed">
+                      Especialización de desarrollo backend en NodeJS, Express,
+                      middleware de autenticación, diseño de base de datos NoSQL
+                      y APIs escalables.
                     </p>
                   </div>
                 </motion.div>
